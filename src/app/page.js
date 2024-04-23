@@ -81,12 +81,35 @@ const Page = () => {
   const [desc, setDesc] = useState('');
   const [mainTask, setMainTask] = useState([]);
 
+
+
+  
   const submitHandler = (e) => {
     e.preventDefault();
-    setMainTask([...mainTask, { title, desc }]);
-    setTitle('');
-    setDesc('');
+    if (title.trim() !== '' && desc.trim() !== '') {
+      setMainTask([...mainTask, { title, desc }]);
+      setTitle('');
+      setDesc('');
+    } else {
+      alert('Please enter both title and description');
+    }
   };
+
+  // const submitHandler = (e) => {
+  //   e.preventDefault();
+  //   if (title.trim() !== '' && desc.trim() !== '') {
+  //     setMainTask([...mainTask, { title, desc }]);
+  //   }
+  //   setTitle('');
+  //   setDesc(''); 
+  // };
+
+  // const submitHandler = (e) => {
+  //   e.preventDefault();
+  //   setMainTask([...mainTask, { title, desc }]);
+  //   setTitle('');
+  //   setDesc('');
+  // };
 
   const removeTask = (index) => {
     const updatedTasks = [...mainTask];
@@ -103,7 +126,7 @@ const Page = () => {
           <p>{t.desc}</p>
         </div>
         <button onClick={() => removeTask(i)} 
-        className='bg-red-500 text-white px-3 py-1 rounded'>Remove</button>
+        className="remove-button">Remove</button>
       </div>
     ));
   }
