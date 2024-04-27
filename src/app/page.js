@@ -74,9 +74,12 @@
 
 
   "use client"
+
+  
+
   import React, { useState } from 'react';
 
-const Page = () => {
+  const Page = () => {
   const [title, setTitle] = useState('');
   const [desc, setDesc] = useState('');
   const [mainTask, setMainTask] = useState([]);
@@ -126,7 +129,7 @@ const Page = () => {
           <p>{t.desc}</p>
         </div>
         <button onClick={() => removeTask(i)} 
-        className="remove-button">Remove</button>
+        className='remove-button'>Remove</button>
       </div>
     ));
   }
@@ -149,7 +152,7 @@ const Page = () => {
           value={desc}
           onChange={(e) => setDesc(e.target.value)}
         />
-        <button className='bg-black text-red-400 rounded px-4 py-2'>Add Task</button>
+        <button className='add_Taks-button'>Add Task</button>
       </form>
       <hr />
       <div className='p-5 bg-slate-200'>

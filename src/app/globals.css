@@ -17,8 +17,8 @@
     }
     
 .add_Taks-button {
-      background-color: #c1df4a;
-      color: white;
+      background-color:cyan;
+      color:cyan-400;
       border: none;
       padding: 8px 16px;
       border-radius: 4px;
@@ -26,7 +26,7 @@
       transition: background-color 0.3s ease;
     }
     
-    .remove-button:hover {
-      background-color: #61e18a;
+    .add_Taks-button:hover {
+      background-color: rgb(93, 146, 146);
     }
     
